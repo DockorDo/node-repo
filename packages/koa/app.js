@@ -1,6 +1,9 @@
 const Koa = require('koa');
 const app = new Koa();
 
+const index = require('./routes/index')
+
+
 app.use(async (ctx, next)=>{
     const start = new Date()
 
@@ -12,13 +15,10 @@ app.use(async (ctx, next)=>{
     console.log(`${ctx.method} ${ctx.url} - ${ms}ms`);
 })
 
-app.use(async ctx => {
-    console.log('[response middleware] response ...');
+app.use(index.routes()).use(index.allowedMethods())
 
-    ctx.body = 'Hello Koa'
-})
 
-app.listen(3000,()=>{
+app.listen(3002,()=>{
     console.log(app)
     console.log(`koa server,start in http://127.0.0.1:3000`)
 })
