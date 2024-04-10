@@ -2,9 +2,8 @@ const Koa = require("koa");
 const app = new Koa();
 const bodyparser = require("koa-bodyparser");
 const router = require("koa-router")();
-const res_api = require('koa.res.api')
 
-app.use(res_api())
+
 app.use(bodyparser({
   enableTypes:['json','form']
 }));
@@ -14,8 +13,7 @@ router.post("/post", (ctx) => {
 });
 
 router.get("/get", (ctx) => {
-ctx.api({name:'dodo'})
-
+  ctx.body = 'Hello Koa'
 });
 
 app.use(router.routes(), router.allowedMethods());
