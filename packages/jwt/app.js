@@ -1,17 +1,11 @@
-const jwt = require("jsonwebtoken")
-const secret = '17koa.com'
+const koa = require("koa")
+const app = new koa()
+const router = require("koa-router")()
+const jwt = require('koa-jwt')
 
-var token = jwt.sign({
-    data:{
-        user_id: 100000,
-        user_name: 'dodo',
-        use_email:'rguo9659@gmail.com'
-    }
-},secret,{expiresIn: '1h'})
+router.get('/api',jwt({secret:'shared-secret'}),(ctx,next)=>{
+    ctx.body={msg:'ok'}
+})
+app.use(router.routes(),router.allowedMethods())
 
-try {
-    var decoded = jwt.verify(token,secret);
-    console.log(decoded)
-} catch (error) {
-    console.log(error.message)
-}
+app.listen(3000)
