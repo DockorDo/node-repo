@@ -10,5 +10,5 @@ mongoose.connection.on("error", (err) => {
   console.log(err.message);
 });
 mongoose.connection.on("open", (res) => {
-    console.log('链接成功');
-  });
+  console.log("链接成功");
+});

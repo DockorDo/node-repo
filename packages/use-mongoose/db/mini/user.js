@@ -5,9 +5,19 @@ const UserSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  password: {},
+  password: {
+    type: String,
+    require:true
+  },
 });
 
 const UserModel = mongoose.model("User", UserSchema);
+
+
+// 实例化模型
+const user = new User({
+  username: "dodo",
+  password: "0123456789",
+});
 
 module.exports = UserModel;
