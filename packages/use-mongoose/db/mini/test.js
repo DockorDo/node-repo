@@ -4,7 +4,7 @@ require("./connect");
 const User = require("./user");
 // 实例化模型
 const user = new User({
-  username: "dodo",
+  username: "test",
   password: "0123456789",
 });
 // 保存
