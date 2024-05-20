@@ -1,0 +1,22 @@
+{
+  "name": "my-npm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "hello": "bin/cli.js"
+  },
+  "scripts": {
+    "test": "node bin/cli -t js -n q",
+    "install": "node install.js"
+  },
+  "files": [
+    "lib"
+  ],
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "husky": "^9.0.11"
+  }
+}

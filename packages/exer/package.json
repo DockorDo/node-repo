@@ -1,5 +1,5 @@
 {
-  "name": "http-module",
+  "name": "exer",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,6 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "body-parse": "^0.1.0"
+    "require-directory": "^2.1.1"
   }
 }

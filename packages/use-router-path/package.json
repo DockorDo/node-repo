@@ -1,5 +1,5 @@
 {
-  "name": "http-module",
+  "name": "use-router-path",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,6 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "body-parse": "^0.1.0"
+    "path-to-regexp": "^6.2.2"
   }
 }

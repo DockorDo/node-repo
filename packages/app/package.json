@@ -11,5 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "koa": "^2.15.3"
+  },
+  "devDependencies": {
+    "browser-sync": "^3.0.2"
   }
 }
